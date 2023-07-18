@@ -8,6 +8,16 @@ let goingRight = true
 let aliensRemoved = []
 let results = 0
 
+window.addEventListener("keydown", changeDirection);
+window.addEventListener("keydown", function(e) { //prevents screen from moving with arrow keys
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
+resetBtn.addEventListener("click", resetGame);
+testBtn.addEventListener("click", tester);
+shootBtn.addEventListener("click", shoot);
+
 for (let i = 0; i < 225; i++) {
   const square = document.createElement('div')
   grid.appendChild(square)
@@ -131,3 +141,18 @@ function shoot(e) {
 }
 
 document.addEventListener('keydown', shoot)
+
+
+function resetGame(){
+  clearInterval(invadersId);
+  aliensRemoved = [];
+  results = 0;
+}
+
+function tester(){
+  clearInterval(invadersId);
+  if(width < 200){
+    width = width + 20;}
+  else {width = 5;}
+  goingRight = false;
+}

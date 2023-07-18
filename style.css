@@ -1,9 +1,10 @@
 .grid {
-	width: 300px;
-	height: 300px;
-	border: solid black 1px;
+	width: 750px;
+	height: 750px;
+	border: solid black 3px;
 	display: flex;
 	flex-wrap: wrap;
+	background-color: rgb(174, 150, 144);
 }
 
 .grid div {
@@ -12,18 +13,50 @@
 }
 
 .invader {
-	background-color: purple;
+	background-color: rgb(224, 189. 243);
 	border-radius: 10px;
 }
 
 .shooter {
-	background-color: green;
+	background-color: rgb(58, 250, 81);
 }
 
 .laser {
-	background-color: orange;
+	background-color: rgb(250, 206, 95);
 }
 
 .boom {
 	background-color: red;
+}
+
+#resetBtn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 200px;
+    height: 150px;
+    border: 5px outset;
+    border-radius: 10px;
+    cursor: grab;
+    color: rgb(253, 78, 13);
+}
+
+#testBtn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150px;
+    width: 100px;
+    height: 275px;
+    border: 11px double hidden ridge dashed;
+    border-radius: 5px;
+    cursor: zoom-in;
+    background-color: rgb(78, 200, 68);
+}
+
+#shootBtn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    border: 11px double hidden ridge dashed;
+    border-radius: 3px;
+    cursor: pointer;
 }
